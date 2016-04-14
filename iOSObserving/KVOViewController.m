@@ -41,7 +41,6 @@
 }
 
 - (void)dealloc {
-    //监听者应该是self，被监听者是car
     [car removeObserver: self forKeyPath: @"carPaint"];
 }
 
