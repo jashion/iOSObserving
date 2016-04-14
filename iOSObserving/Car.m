@@ -9,7 +9,6 @@
 #import "Car.h"
 #import "Tire.h"
 #import "Engine.h"
-#import "KVOViewController.h"
 
 @implementation Car
 {
@@ -18,29 +17,25 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        _name = @"宝马";
-        _speed = 120;
-        _carPaint = @"红色";
-        _engine = [[Engine alloc] init];
-        _tires = [@[] mutableCopy];
-        for (NSInteger i = 0; i < 4; i++) {
-            tire = [[Tire alloc] init];
-            tire.pressure = 20 + i % 2 * 2;
-            [_tires addObject: tire];
-        }
-//        _make = @"BMW";
-        _modelYear = 1991;
-        _numberOfDoors = 4;
-        
+        [self inital];
     }
     return self;
 }
 
-- (instancetype)initWithKVO: (KVOViewController *)kvo {
-    if (self = [self init]) {
-        [self addObserver: kvo forKeyPath: @"carPaint" options: (NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld) context: nil];
+- (void)inital {
+    _name = @"宝马";
+    _speed = 120;
+    _carPaint = @"红色";
+    _engine = [[Engine alloc] init];
+    _tires = [@[] mutableCopy];
+    for (NSInteger i = 0; i < 4; i++) {
+        tire = [[Tire alloc] init];
+        tire.pressure = 20 + i % 2 * 2;
+        [_tires addObject: tire];
     }
-    return self;
+    //        _make = @"BMW";
+    _modelYear = 1991;
+    _numberOfDoors = 4;
 }
 
 //解决设置为nil的问题

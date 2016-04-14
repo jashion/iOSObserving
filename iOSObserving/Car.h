@@ -10,7 +10,6 @@
 
 @class Tire;
 @class Engine;
-@class KVOViewController;
 
 @interface Car : NSObject
 
@@ -25,7 +24,5 @@
 @property (nonatomic, assign) int numberOfDoors;
 
 @property (nonatomic, strong) NSMutableDictionary *stuff;
-
-- (instancetype)initWithKVO: (KVOViewController *)kvo;
 
 @end
