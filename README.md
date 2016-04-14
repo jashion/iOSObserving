@@ -102,6 +102,6 @@ car = [[Car alloc] init];
 
 (4)Demo展示：
 
-![iOSObserving](/Users/jashion/Downloads/demo/iOS/git/iOSObserving/2016-04-14 12_13_33.gif)
+![iOSObserving](iOSObserving.gif)
 
 [Demo下载](https://github.com/jashion/iOSObserving)
